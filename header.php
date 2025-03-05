@@ -14,16 +14,19 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <header>
+    <header class="header"> 
         <div class="container">
-            <h1><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
-            <p><?php bloginfo('description'); ?></p>
-
-            <nav>
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/favicon.png" 
+                alt="<?php bloginfo('name'); ?>" 
+                class="logo">
+            </a>
+            
+            <nav class="nav">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'primary-menu',
-                    'container'      => 'ul',
+                    'container'      => false,
                     'menu_class'     => 'nav-menu',
                 ));
                 ?>
