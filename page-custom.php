@@ -1,17 +1,22 @@
 <?php
 /**
- * Template Name: Custom Page Template
+ * Template Name: Custom Template
+ *
+ * A uniquely designed template for special pages.
+ *
+ * @package IDM250
  */
-get_header(); ?>
+?>
+
+<?php get_header(); ?>
+
+<?php get_template_part('components/hero-home'); ?>
 
 <main class="custom-page">
-    <div class="container">
-        <h1><?php the_title(); ?></h1>
-        
-        <div class="custom-content">
-            <?php the_content(); ?>
-        </div>
-    </div>
+
+    <article class="custom-content">
+        <?php the_content(); ?>
+    </article>
 </main>
 
 <?php get_footer(); ?>
