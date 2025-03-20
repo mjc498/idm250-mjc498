@@ -8,7 +8,15 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title('|', true, 'right'); ?></title>
+    
+    <title>
+        <?php
+        wp_title('|', true, 'right');
+        bloginfo('name'); // IDM250
+        ?>
+    </title>
+
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png">
 
     <?php wp_head(); ?>
 </head>
@@ -17,9 +25,9 @@
     <header class="header"> 
         <div class="container">
             <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/favicon.png" 
-                alt="<?php bloginfo('name'); ?>" 
-                class="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" 
+                    alt="<?php bloginfo('name'); ?>" 
+                    class="logo">
             </a>
             
             <nav class="nav">
